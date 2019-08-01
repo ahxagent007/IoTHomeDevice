@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <EditText
+        android:id="@+id/ET_fullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="NAME"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/ET_regEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/ET_PhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/ET_Address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/ET_DID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Device ID"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/ET_pWord1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/ET_pWord2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Re-Enter Password"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/btn_signUpDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        />
+
+
+
+</LinearLayout>

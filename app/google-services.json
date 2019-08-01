@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "166367544133",
+    "firebase_url": "https://iot-home-device.firebaseio.com",
+    "project_id": "iot-home-device",
+    "storage_bucket": "iot-home-device.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166367544133:android:a649bd848c150063",
+        "android_client_info": {
+          "package_name": "com.secretdevelopersltd.dexian.iothomedevice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "166367544133-6m3tcgrevvk2lrh4n3fb4bvbrnadiemp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.secretdevelopersltd.dexian.iothomedevice",
+            "certificate_hash": "b91ef6edde66a05090ac39b6bfcba8cb3fec898c"
+          }
+        },
+        {
+          "client_id": "166367544133-gdrr42cri82ee45hsf0prrq81cego42k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBISuOIDU0DA8d48YOmjg-CQfq6g751uXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "166367544133-gdrr42cri82ee45hsf0prrq81cego42k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
