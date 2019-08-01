@@ -185,7 +185,7 @@ public class Login extends AppCompatActivity {
 
     }
 
-    private void signUp(final String Email, String password, final String Name, final String Phone, final String Address, final String PG, final AlertDialog Dialog){
+    private void signUp(final String Email, String password, final String Name, final String Phone, final String Address, final String DID, final AlertDialog Dialog){
 
         //String email = inputEmail.getText().toString().trim();
         //String password = inputPassword.getText().toString().trim();
@@ -226,25 +226,24 @@ public class Login extends AppCompatActivity {
                             FirebaseUser fu = task.getResult().getUser();
                             String UID = fu.getUid();
 
-                            //User u = new User(Name,Email,Phone,Address,PG);
+                            User u = new User(Name,Email,Phone,Address,DID);
 
-                            pushToFirebase(UID,"USER");
+                            pushToFirebase(UID,u);
 
                             Toast.makeText(Login.this, "Registration Complete Successfully, Please login now",
                                     Toast.LENGTH_LONG).show();
 
                             Dialog.cancel();
-                            //startActivity(new Intent(Login.this, MainActivity.class));
-                            //finish();
+
                         }
                     }
                 });
     }
 
-    private void pushToFirebase(String uid, String user) {
+    private void pushToFirebase(String uid, User user) {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("Registration");
+        DatabaseReference myRef = database.getReference("USER");
         myRef.child(uid).setValue(user);
 
     }
@@ -252,7 +251,7 @@ public class Login extends AppCompatActivity {
     private void getNameFromFirebase(String uid) {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("Registration");
+        DatabaseReference myRef = database.getReference("USER");
         Query query = myRef.orderByKey().equalTo(uid);
 
         query.addValueEventListener(new ValueEventListener() {
@@ -260,8 +259,8 @@ public class Login extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot ds : dataSnapshot.getChildren()){
 
-                    //User uu = ds.getValue(User.class);
-                    //storeUname(uu.getName());
+                    User uu = ds.getValue(User.class);
+                    storeUname(uu.getName());
 
                 }
             }
