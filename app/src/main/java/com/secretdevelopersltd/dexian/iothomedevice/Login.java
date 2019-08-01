@@ -44,14 +44,13 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Log.i(TAG,"LOGIN ACTIVITY CODE NO. ************************************************ 07");
         //Toast.makeText(getApplicationContext(),"Please Login",Toast.LENGTH_LONG).show();
 
-        /*ET_email = findViewById(R.id.ET_email);
+        ET_email = findViewById(R.id.ET_email);
         ET_password = findViewById(R.id.ET_password);
         btn_login = findViewById(R.id.btn_login);
         btn_signup = findViewById(R.id.btn_signup);
-        TV_forgetPass = findViewById(R.id.TV_forgetPass);*/
+        TV_forgetPass = findViewById(R.id.TV_forgetPass);
 
 
 
@@ -147,7 +146,7 @@ public class Login extends AppCompatActivity {
 
     private void signIn(String email, String pass){
 
-        Log.i(TAG,"signIn Method");
+        Log.i(TAG,"Firebase SignIn Method");
         final String E = email;
         final String P = pass;
 
